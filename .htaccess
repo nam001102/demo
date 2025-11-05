@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Redirect when visiting exactly /demo/
+RewriteRule ^$ index.php?page=home [L,QSA]

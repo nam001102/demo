@@ -1,0 +1,60 @@
+#js-hot-week-container {
+    display: grid;
+    gap: 12px;
+    /* uniform gap: 12px both vertical and horizontal */
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+    /* default to 1 column for small screens */
+    grid-auto-rows: 140px;
+    max-height: 2 * 140px + 24px;
+    /* 2 rows + 1 gap */
+}
+
+/* Responsive grid columns */
+@media (max-width: 1079px) and (min-width: 768px) {
+    #js-hot-week-container {
+        grid-template-columns: repeat(1, 1fr);
+        max-height: calc(2 * 140px + 20px);
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1080px) {
+    #js-hot-week-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-height: calc(2 * 140px + 20px);
+    }
+}
+
+@media (min-width: 1400px) {
+    #js-hot-week-container {
+        grid-template-columns: repeat(3, 1fr);
+        max-height: calc(2 * 140px + 20px);
+    }
+}
+
+/* Card image styles */
+#js-hot-week-container .card-img{
+    width: 100%;
+    height: 140px !important;
+    /* fixed height for consistent grid items */
+    object-fit: cover;
+    border-radius: 0.375rem;
+    /* optional: match Bootstrap rounded-3 */
+}
+
+/* Adjust card image height for very small screens */
+@media (max-width: 767px) {
+    #js-hot-week-container .card-img {
+        height: auto;
+        /* auto height for smaller screens */
+    }
+}
+
+/* Dark / light footer background */
+[data-bs-theme="dark"] footer {
+    background-color: #242526 !important;
+}
+
+[data-bs-theme="light"] footer {
+    background-color: #4B4B4B !important;
+}

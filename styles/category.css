@@ -1,0 +1,130 @@
+.items-container {
+    display: grid;
+    gap: 20px;
+    /* space between items */
+}
+
+@media (min-width: 1400px) {
+    .items-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1399px) {
+    .items-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1079px) {
+    .items-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .items-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.pagination,
+.pagination .page-link,
+.pagination span {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Common pagination layout */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination .page-link {
+    padding: 8px 12px;
+    text-decoration: none;
+    border: none !important; /* Override Bootstrap border */
+    transition: 0.2s, color 0.2s;
+}
+
+.pagination .page-item.prev .page-link,
+.pagination .page-item.next .page-link {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-clip: padding-box;
+}
+
+/* Light theme */
+[data-bs-theme="light"] .pagination .page-link {
+    color: #000;
+}
+
+/* Active page */
+[data-bs-theme="light"] .pagination .page-item.active .page-link {
+    background: #DF876E;
+    color: #000; /* Black text */
+}
+
+/* Prev / Next normal state */
+[data-bs-theme="light"] .pagination .page-item.prev .page-link,
+[data-bs-theme="light"] .pagination .page-item.next .page-link {
+    background: #DF876E;
+    color: #000;
+    border: none !important;
+}
+
+/* Hover effect for non-active */
+[data-bs-theme="light"] .pagination .page-link:hover:not(.active) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled state — no background */
+[data-bs-theme="light"] .pagination .page-item.disabled .page-link {
+    pointer-events: none;
+    opacity: 0.5;
+    background: transparent;
+    border: none !important;
+}
+
+/* Dark theme */
+[data-bs-theme="dark"] .pagination .page-link {
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .pagination .page-item.active .page-link {
+    background: #DF876E;
+    color: #000; /* Black text */
+}
+
+[data-bs-theme="dark"] .pagination .page-item.prev .page-link,
+[data-bs-theme="dark"] .pagination .page-item.next .page-link {
+    background: #DF876E;
+    color: #fff;
+    border: none !important;
+}
+
+[data-bs-theme="dark"] .pagination .page-link:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .pagination .page-item.disabled .page-link {
+    pointer-events: none;
+    opacity: 0.5;
+    background: transparent;
+    color: #fff;
+    border: none !important;
+}
+
+/* Ensure no border anywhere on page-links */
+[data-bs-theme="light"] .pagination .page-link,
+[data-bs-theme="dark"] .pagination .page-link {
+    border: none !important;
+}
