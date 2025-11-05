@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
-  
+
 <?php include("includes/demoAssets.php"); ?>
 <?php include("includes/header.php"); ?>
 
 
 <body>
-  <?php include("includes/navbar.php"); ?>
+  <?php
+  $page = $_GET['page'] ?? 'home';
+  $allowedPages = ['home', 'roblox', 'minecraft', 'fqas', 'reports', 'account', 'login', 'ranking'];
 
-  <main class="body w-100 h-100">
+  // show navbar only if not login or ranking
+  if (!in_array($page, ['login', 'ranking'])) {
+    include("includes/navbar.php");
+  }
+  ?>
+
+  <main class="body">
     <?php
-    $page = $_GET['page'] ?? 'home';
-    $allowedPages = ['home', 'roblox', 'minecraft', 'fqas', 'reports', 'account'];
-
     if (in_array($page, $allowedPages)) {
       include("includes/$page.php");
     } else {
@@ -20,12 +25,15 @@
     }
     ?>
   </main>
-  <?php include("includes/footer.php"); ?>
-  <?php include("includes/js.php"); ?>
+
+  <?php
+  // show footer only if not login or ranking
+  if (!in_array($page, ['login', 'ranking'])) {
+    include("includes/footer.php");
+  }
+
+  include("includes/js.php");
+  ?>
 </body>
-
-
-
-
 
 </html>

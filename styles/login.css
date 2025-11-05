@@ -1,0 +1,77 @@
+.login-bg {
+    background: url("../assets/img/test.gif") center center / cover no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.glassContainer {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transform: translate(0%, 50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+}
+
+
+.glassContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 30px;
+    -webkit-box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7), inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7), inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
+}
+
+.glassContainer::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: 30px;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    -webkit-filter: url(#container-glass);
+    filter: url(#container-glass);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.card-body,
+.container,
+.row,
+.col-12 {
+    background: transparent !important;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px); /* iOS glass blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}

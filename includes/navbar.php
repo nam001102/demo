@@ -121,7 +121,7 @@ $currentSub = $_GET['sub'] ?? '';
                     </label>
 
                     <a class="btn d-flex align-items-center justify-content-center theme-account-btn"
-                        href="index.php?page=account">
+                        href="index.php?page=login">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 56 56" fill="none">
                             <path d="M38 40C38 34.8453 33.5228 30.6667 28 30.6667C22.4772 30.6667 18 34.8453 18 40H38Z"
                                 fill="currentColor" />

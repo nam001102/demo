@@ -3,6 +3,7 @@
 <script src="assets/js/theme-switcher.js"></script>
 <script src="assets/js/home.js"></script>
 <script src="assets/js/category.js"></script>
+<script src="assets/js/login.js"></script>
 <script src="assets/js/footer.js"></script>
 <script>
     const featuredItems = <?= json_encode(array_slice($featuredItems, 0)) ?>;
