@@ -1,5 +1,5 @@
-.login-bg {
-    background: url("../assets/img/test.gif") center center / cover no-repeat;
+.ranking-bg {
+    background: url("../assets/img/ic_ranking_bg.png") center center / cover no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     overflow: hidden;
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     width: 400px;
     padding: 2rem;
@@ -55,53 +55,23 @@
     background: transparent !important;
 }
 
-.form-control {
-    background: rgba(255, 255, 255, 0.1);
-    /* semi-transparent white */
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    /* iOS glass blur effect */
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-}
+.scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    cursor: grab;
+  }
 
-.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
+  .scroll-container::-webkit-scrollbar {
+    width: 6px;
+  }
 
-.form-control:focus {
-    background: rgba(255, 255, 255, 0.2);
-    outline: none;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
 
-/* Animations for form switching */
-.auth-form {
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-out {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.d-none {
-    display: none !important;
-}
-
-.error-message {
-  color: #ffb3b3;
-  font-size: 0.85rem;
-  min-height: 1em;
-  text-align: left;
-  width: 75%;
-}
+  .scroll-container:active {
+    cursor: grabbing;
+  }
