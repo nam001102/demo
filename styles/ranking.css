@@ -7,19 +7,16 @@
 
 .glassContainer {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 2rem;
+    left: 2rem;
+    bottom: 2rem;
+    width: 90%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    width: 400px;
-    padding: 2rem;
+    padding: 1.5rem;
     overflow: hidden;
-    transition: height 0.4s ease-in-out;
 }
 
 
@@ -55,23 +52,39 @@
     background: transparent !important;
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .scroll-container {
-    max-height: 400px;
+    flex: 1;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-    cursor: grab;
-  }
+    padding-bottom: 4rem;
+    cursor: default;
+}
 
-  .scroll-container::-webkit-scrollbar {
+.scroll-container::-webkit-scrollbar {
     width: 6px;
-  }
+}
 
-  .scroll-container::-webkit-scrollbar-thumb {
+.scroll-container::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
-  }
+}
+.scroll-container:active {
+    cursor: default; /* remove grabbing cursor entirely */
+}
 
-  .scroll-container:active {
-    cursor: grabbing;
-  }
+
+
+@media (max-width: 768px) {
+    .glassContainer {
+        width: 90%;
+        padding: 1rem;
+        top: 1rem;
+        left: 1rem;
+        bottom: 1rem;
+    }
+}
