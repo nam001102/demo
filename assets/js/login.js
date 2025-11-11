@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const glassContainer = document.querySelector(".glassContainer");
+    const glassContainerLogin = document.querySelector(".glassContainerLogin");
     const loginForm = document.getElementById("loginForm");
     const registerForm = document.getElementById("registerForm");
     const switchToRegister = document.getElementById("switchToRegister");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 ? loginForm
                 : registerForm;
             const newHeight = currentForm.scrollHeight + 50 + "px";
-            glassContainer.style.height = newHeight;
+            glassContainerLogin.style.height = newHeight;
         }, 50);
     }
     function setError(id, message) {
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // --- Animated height transitions ---
-    glassContainer.style.transition = "height 0.4s cubic-bezier(0.22, 1, 0.36, 1)";
+    glassContainerLogin.style.transition = "height 0.4s cubic-bezier(0.22, 1, 0.36, 1)";
 
     function animateHeightTo(targetForm) {
         // Temporarily show form (invisible) to measure real height
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Animate to target height
         requestAnimationFrame(() => {
-            glassContainer.style.height = targetHeight;
+            glassContainerLogin.style.height = targetHeight;
         });
     }
 
@@ -174,5 +174,5 @@ document.addEventListener("DOMContentLoaded", function () {
         showLogin();
     });
 
-    glassContainer.style.height = loginForm.scrollHeight + 50 + "px";
+    glassContainerLogin.style.height = loginForm.scrollHeight + 50 + "px";
 });

@@ -1,5 +1,5 @@
 <section class="vh-100 login-bg overflow-hidden">
-    <div class="glassContainer text-white border-0 shadow-lg mx-auto"
+    <div class="glassContainerLogin text-white border-0 shadow-lg mx-auto"
         style="border-radius: 1rem; overflow: hidden; max-width: 400px;">
         <div class="card-body p-4 text-center position-relative">
 

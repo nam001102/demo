@@ -1,6 +1,6 @@
 <section class="vh-100 ranking-bg overflow-hidden d-flex align-items-start justify-content-start">
   <div class="container-fluid h-100  align-items-start justify-content-start">
-    <div class="glassContainer text-white border-0 shadow-lg vh-90">
+    <div class="glassContainerRanking text-white border-0 shadow-lg vh-90">
       <div class="card-body p-4 text-center position-relative">
         <!-- Scrollable content -->
         <div class="scroll-container col-md-12" id="rankingList">
