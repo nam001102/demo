@@ -8899,6 +8899,26 @@ fieldset:disabled .btn {
     margin-left: 3rem !important
 }
 
+.mx-6 {
+    margin-right: 4rem !important;
+    margin-left: 4rem !important
+}
+
+.mx-7 {
+    margin-right: 5rem !important;
+    margin-left: 5rem !important
+}
+
+.mx-8 {
+    margin-right: 6rem !important;
+    margin-left: 6rem !important
+}
+
+.mx-center {
+    margin-right: 20rem !important;
+    margin-left: 20rem !important
+}
+
 .mx-auto {
     margin-right: auto !important;
     margin-left: auto !important

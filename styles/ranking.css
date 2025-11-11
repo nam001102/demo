@@ -6,19 +6,19 @@
 }
 
 .glassContainer {
-    position: absolute;
+    position: relative;
     top: 2rem;
-    left: 2rem;
     bottom: 2rem;
     width: 90%;
+    top: 50%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: 1rem;
     overflow: hidden;
 }
-
 
 .glassContainer::before {
     content: '';
@@ -45,23 +45,18 @@
     isolation: isolate;
 }
 
-.card-body,
-.container,
-.row,
-.col-12 {
-    background: transparent !important;
-}
-
 .card-body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
 }
 
 .scroll-container {
     flex: 1;
     overflow-y: auto;
     padding-bottom: 4rem;
+    width: 90%;
     cursor: default;
 }
 
@@ -73,15 +68,17 @@
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 3px;
 }
-.scroll-container:active {
-    cursor: default; /* remove grabbing cursor entirely */
+
+.bottom-button-container {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
 }
-
-
 
 @media (max-width: 768px) {
     .glassContainer {
-        width: 90%;
+        width: 95%;
         padding: 1rem;
         top: 1rem;
         left: 1rem;
