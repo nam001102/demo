@@ -1,6 +1,5 @@
 <section class="vh-100 ranking-bg overflow-hidden d-flex align-items-start justify-content-start">
-  <div class="container-fluid h-100  align-items-start justify-content-start">
-    <div class="glassContainerRanking text-white border-0 shadow-lg vh-90">
+  <div class="glassContainerRanking text-white border-0 shadow-lg vh-90">
       <div class="card-body p-4 text-center position-relative">
         <!-- Scrollable content -->
         <div class="scroll-container col-md-12" id="rankingList">
@@ -18,13 +17,12 @@
 
       </div>
     </div>
-  </div>
 
 </section>
 
 
 <svg style="display: none">
-  <filter id="container-glass" x="0%" y="0%" width="100%" height="100%">
+  <filter id="container-glass-ranking" x="0%" y="0%" width="100%" height="100%">
     <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
     <feGaussianBlur in="noise" stdDeviation="0.02" result="blur" />
     <feDisplacementMap in="SourceGraphic" in2="blur" scale="77" xChannelSelector="R" yChannelSelector="G" />
